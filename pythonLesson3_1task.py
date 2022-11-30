@@ -2,13 +2,12 @@
 # Пример:
 # [2, 3, 5, 9, 3] -> на нечётных идексах элементы 3 и 9, ответ: 12
 
-newList  = [2, 3, 5, 9, 3, 5]
+newList  = [2, 3, 5, 9, 3]
 
 def sum(ls):
     result = 0   
-    for i in range(len(ls)):
-        if i % 2 != 0: 
-            result += ls[i]
+    for i in ls[1::2]:           
+        result += i
     return result
 
 print(sum(newList))    
